@@ -3,14 +3,7 @@ export default class ShopItemFunc extends React.Component  {
 
     constructor(props) {
         super(props)
-
-        this.brand = this.props.item.brand
-        this.title =  this.props.item.title
-        this.description = this.props.item.description
-        this.descriptionFull = this.props.item.descriptionFull
-        this.price = this.props.item.price
-        this.currency = this.props.item.currency
-
+            Object.assign(this , props.item)
     }
     render() {
         return <>
