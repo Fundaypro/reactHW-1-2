@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types"
 export default class ShopItemFunc extends React.Component  {
 
     constructor(props) {
@@ -25,6 +26,15 @@ export default class ShopItemFunc extends React.Component  {
             </div>
         </>;
     }
+}
 
-
+ShopItemFunc.propTypes = {
+    item : PropTypes.shape({
+        brand : PropTypes.string,
+        title : PropTypes.string,
+        description : PropTypes.string,
+        descriptionFull : PropTypes.string,
+        currency : PropTypes.oneOf(['£' , "$" , "€" , "₽"]),
+        price : PropTypes.number
+    })
 }
